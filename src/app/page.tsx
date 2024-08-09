@@ -20,9 +20,13 @@ export default function Home() {
     { id: "hobbies", title: "Hobbies" },
   ];
 
+  const intro = `Hey, I'm Brandon!`;
+
   const personalDescSec1 = `Growing up in Bellevue, Washington, I've always been intrigued by the intersection of human interaction, new technologies, and programming.`;
   const personalDescSec2 = `I'm a passionate software engineer with expertise in backend programming, manufacturing IT, and web technologies. Welcome to my portfolio!`;
   const personalDescSec3 = `Recently, I earned my B.S. in Computer Science from California Polytechnic State University, San Luis Obispo.`;
+
+  const hobbiesDesc = `When I'm not coding, I enjoy spending my spare time:`;
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -62,7 +66,7 @@ export default function Home() {
 
       <main className="container mx-auto mt-8 px-4">
         <section id="intro" className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">Hey, I'm Brandon!</h2>
+          <h2 className="text-3xl font-bold mb-4">{intro}</h2>
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 space-y-4">
             <div className="w-full md:w-1/2 space-y-4">
               <p className="text-lg">{personalDescSec1}</p>
@@ -125,22 +129,29 @@ export default function Home() {
         <section id="skills" className="mb-12">
           <h2 className="text-3xl font-bold mb-4">Skills</h2>
           <div className="flex flex-wrap gap-2">
-            {["React", "JavaScript", "HTML", "CSS", "Node.js", "Python"].map(
-              (skill) => (
-                <span
-                  key={skill}
-                  className="bg-blue-100 text-blue-800 px-3 py-1 rounded"
-                >
-                  {skill}
-                </span>
-              )
-            )}
+            {[
+              "Python",
+              "React",
+              "Docker",
+              "TypeScript",
+              "Golang",
+              "HTML",
+              "CSS",
+              "Node.js",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="bg-blue-100 text-blue-800 px-3 py-1 rounded"
+              >
+                {skill}
+              </span>
+            ))}
           </div>
         </section>
 
         <section id="hobbies" className="mb-12">
           <h2 className="text-3xl font-bold mb-4">Hobbies</h2>
-          <p>When I'm not coding, I enjoy spending my spare time:</p>
+          <p>{hobbiesDesc}</p>
           <ul className="list-disc list-inside">
             <li>Weight lifting</li>
             <li>Hiking</li>
