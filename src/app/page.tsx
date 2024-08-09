@@ -20,8 +20,9 @@ export default function Home() {
     { id: "hobbies", title: "Hobbies" },
   ];
 
-  const personalDesc = `I'm a passionate software engineer with expertise in web
-  technologies, manufacturing IT, and backend programming.\nWelcome to my portfolio!`;
+  const personalDescSec1 = `Growing up in Bellevue, Washington, I've always been intrigued by the intersection of human interaction, new technologies, and programming.`;
+  const personalDescSec2 = `I'm a passionate software engineer with expertise in backend programming, manufacturing IT, and web technologies. Welcome to my portfolio!`;
+  const personalDescSec3 = `Recently, I earned my B.S. in Computer Science from California Polytechnic State University, San Luis Obispo.`;
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -61,10 +62,12 @@ export default function Home() {
 
       <main className="container mx-auto mt-8 px-4">
         <section id="intro" className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">Introduction</h2>
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-            <div className="w-full md:w-1/2">
-              <p className="text-lg">{personalDesc}</p>
+          <h2 className="text-3xl font-bold mb-4">Hey, I'm Brandon!</h2>
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 space-y-4">
+            <div className="w-full md:w-1/2 space-y-4">
+              <p className="text-lg">{personalDescSec1}</p>
+              <p className="text-lg">{personalDescSec2}</p>
+              <p className="text-lg">{personalDescSec3}</p>
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
               <div className="w-64 h-64 relative rounded-full overflow-hidden shadow-lg">
@@ -100,12 +103,21 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-4">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white p-4 rounded shadow">
-              <h3 className="text-xl font-semibold mb-2">Project 1</h3>
-              <p>A brief description of Project 1 and its key features.</p>
+              <h3 className="text-xl font-semibold mb-2">365DeliveryService</h3>
+              <p>
+                Built command line interface that handles concurrent users and
+                transactions backed by a MySQL database.{" "}
+              </p>
             </div>
             <div className="bg-white p-4 rounded shadow">
-              <h3 className="text-xl font-semibold mb-2">Project 2</h3>
-              <p>A brief description of Project 2 and its key features.</p>
+              <h3 className="text-xl font-semibold mb-2">ProfileDrop</h3>
+              <p>
+                Built a mobile app with Flutter to connect nearby networking
+                individuals by sharing relevant social media platforms using
+                Android Studio and MapBox API. Worked closely within a team of
+                5, utilizing agile methodologies (e.g., Scrum, Kanban) –
+                emphasizing the importance of deliverables and communication.
+              </p>
             </div>
           </div>
         </section>
@@ -128,17 +140,18 @@ export default function Home() {
 
         <section id="hobbies" className="mb-12">
           <h2 className="text-3xl font-bold mb-4">Hobbies</h2>
+          <p>When I'm not coding, I enjoy spending my spare time:</p>
           <ul className="list-disc list-inside">
-            <li>Photography</li>
+            <li>Weight lifting</li>
             <li>Hiking</li>
-            <li>Reading sci-fi novels</li>
-            <li>Playing guitar</li>
+            <li>Surfing</li>
+            <li>Thrifting</li>
           </ul>
         </section>
       </main>
 
       <footer className="bg-gray-800 text-white py-4 text-center">
-        <p>&copy; 2024 Developer Name. All rights reserved.</p>
+        <p>&copy; 2024 Brandon Huynh. All rights reserved.</p>
       </footer>
     </div>
   );
